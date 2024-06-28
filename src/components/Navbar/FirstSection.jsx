@@ -16,11 +16,12 @@ display: flex;
 justify-content: center;
 align-items: center;
 font-size: 28px;
-font-weight: bold;
+font-weight: 800;
 width: 33px;
 border-radius: 50%;
 color: #D9BEB8;
 box-shadow: 0 4px 8px white;
+
 `;
 
 const Titles = ["War", "Trending", "Cartoon", "Top"];
