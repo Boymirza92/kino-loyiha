@@ -16,7 +16,7 @@ display: flex;
 justify-content: center;
 align-items: center;
 font-size: 28px;
-font-weight: 800;
+font-weight: bold;
 width: 33px;
 border-radius: 50%;
 color: #D9BEB8;
