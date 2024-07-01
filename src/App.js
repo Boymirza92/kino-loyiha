@@ -1,11 +1,11 @@
 import React from "react";
-import BasicLayout from "./components/Layoult/Layoult.jsx";
+import Router from "./components/Layoult/Router";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const App = () => {
   return (
     <div>
-      <BasicLayout>Salom</BasicLayout>
-      Test
+      <Router/>
     </div>
   );
 };

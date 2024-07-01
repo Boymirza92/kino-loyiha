@@ -17,7 +17,7 @@ justify-content: center;
 align-items: center;
 font-size: 28px;
 font-weight: bold;
-width: 33px;
+width: 67px;
 border-radius: 50%;
 color: #D9BEB8;
 box-shadow: 0 4px 8px white;
