@@ -1,5 +1,5 @@
 import React from 'react'
-import HomPagesDefolt from './Containers/HompagesDefolt'
+import HomPagesDefolt from './Containers/Cartoons'
 
 const HomePageConteiner = () => {
   return (

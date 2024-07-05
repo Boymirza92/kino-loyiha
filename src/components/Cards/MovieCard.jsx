@@ -1,5 +1,6 @@
 import React from "react";
-import { Card, CardBody, CardSubtitle } from "reactstrap";
+import { BsJustify } from "react-icons/bs";
+import { Card, CardBody, CardTitle } from "reactstrap";
 import styled from "styled-components";
 
 const StyledCard = styled("div")`
@@ -10,7 +11,9 @@ const StyledCard = styled("div")`
   }
 `;
 
-const MovieCard = () => {
+const MovieCard = ({ movie }) => {
+  if (!movie) return null;
+
   return (
     <StyledCard
       style={{
@@ -18,15 +21,15 @@ const MovieCard = () => {
         height: "100%",
         border: "2px solid #0D0000",
         borderRadius: "3px",
-        color: "white"
+        color: "white",
       }}
     >
       <CardBody>
-        <CardSubtitle className="mb-2 text-center" tag="h6">
-          Card subtitle
-        </CardSubtitle>
+        <CardTitle className="mb-3 text-center" tag="h6">
+          {movie.title}
+        </CardTitle>
       </CardBody>
-      <img alt="Card cap" src="https://picsum.photos/318/180" width="100%" />
+      <img alt="Card cap" src={movie.backdropPath} width="100%" />
       <CardBody></CardBody>
     </StyledCard>
   );

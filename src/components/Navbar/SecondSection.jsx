@@ -7,6 +7,9 @@ justify-content: flex-end;
 align-items: center;
 width: 50%;
 font-size: 25px;
+& > :hover {
+    cursor: pointer;
+  }
 `
 const SecondSection = () => {
   return (
