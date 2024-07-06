@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import BasicLayout from "./Layoult.jsx";
-import HomePageContainer from "../Conteiners/HomePage/Index.jsx";
+import WarMovies from "../Conteiners/HomePage/WarMovies/Cartoons.jsx";
 import Cartoons from "../Conteiners/HomePage//Containers/Cartoons.jsx";
 import * as ROUTES from '../Constants/Routs';
 
@@ -14,7 +14,7 @@ const AppRouter = () => {
           path="ROUTES.HOME"
           element={
             <BasicLayout>
-              <HomePageContainer />
+              <Cartoons />
             </BasicLayout>
           }
         />
@@ -23,6 +23,14 @@ const AppRouter = () => {
           element={
             <BasicLayout>
               <Cartoons />
+            </BasicLayout>
+          }
+        />
+        <Route
+          path={ROUTES.WAR}
+          element={
+            <BasicLayout>
+              <WarMovies />
             </BasicLayout>
           }
         />

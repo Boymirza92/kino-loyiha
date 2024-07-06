@@ -1,2 +1,2 @@
 export const CARTOONS = 'cartoons'
-export const WAR = 'war'
+export const WAR = 'war_movies'

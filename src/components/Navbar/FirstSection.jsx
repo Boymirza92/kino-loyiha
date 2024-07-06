@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const Container = styled("div")`
   display: flex;
@@ -19,7 +19,7 @@ const Logo = styled("div")`
   align-items: center;
   font-size: 28px;
   font-weight: bold;
-  width: 67px;
+  width: 55px;
   border-radius: 50%;
   color: #d9beb8;
   box-shadow: 0 4px 8px white;
@@ -34,13 +34,18 @@ const Logo = styled("div")`
   }
 `;
 
-const Titles = ["War", "Trending", "Cartoons", "Top"];
+const Titles = ["War_movies", "Trending", "Cartoons", "Top"];
 
 const FirstSection = () => {
   const navigate = useNavigate();
+  const location = useLocation();
+
   const handleTitleClick = (el) => {
-    navigate(el.toLowerCase());
-  };
+    const path = `/${el.toLowerCase()}`;
+    if (location.pathname !== path) {
+       navigate(path);
+  }
+};
   return (
     <Container>
       <Logo onClick={() => handleTitleClick("/")}>M</Logo>
