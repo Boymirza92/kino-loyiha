@@ -8,7 +8,7 @@ display: flex;
 align-items: center;
 justify-content: space-between;
 padding: 0 3rem;
-height: 3rem;
+height: 4rem;
 Background-color: #261C1C;
 color: #C7FFED;
 `

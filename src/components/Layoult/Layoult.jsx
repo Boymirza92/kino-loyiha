@@ -14,8 +14,9 @@ const BasicLayout = ({ children }) => {
   return (
     <Container>
       <Navbar />
-      <ChildrinContainer />
+      <ChildrinContainer>
       {children}
+      </ChildrinContainer>
       <Footer />
     </Container>
   );

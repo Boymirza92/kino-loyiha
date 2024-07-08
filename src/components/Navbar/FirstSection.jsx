@@ -6,12 +6,15 @@ const Container = styled("div")`
   display: flex;
   align-items: center;
   font-size: 17px;
-  width: 50%;
+  width: 80%;
 `;
 
 const Title = styled("p")`
-  margin: 0 2rem;
+  margin: 0 1rem;
   cursor: pointer;
+  &: hover{
+  transform: scale(1.2);
+  }
 `;
 const Logo = styled("div")`
   display: flex;
@@ -34,7 +37,7 @@ const Logo = styled("div")`
   }
 `;
 
-const Titles = ["War_movies", "Trending", "Cartoons", "Top"];
+const Titles = ["War_movies", "Popular_movies", "Cartoons", "Trending_movies", "Fantasy_movies", "Science_fiction"];
 
 const FirstSection = () => {
   const navigate = useNavigate();
@@ -43,12 +46,12 @@ const FirstSection = () => {
   const handleTitleClick = (el) => {
     const path = `/${el.toLowerCase()}`;
     if (location.pathname !== path) {
-       navigate(path);
-  }
-};
+      navigate(path);
+    }
+  };
   return (
     <Container>
-      <Logo onClick={() => handleTitleClick("/")}>M</Logo>
+      <Logo onClick={() => handleTitleClick("ROUTES.HOME")}>M</Logo>
       {Titles.map((el) => (
         <Title onClick={() => handleTitleClick(el)} key={el}>
           {el}
